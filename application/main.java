@@ -1,4 +1,5 @@
 package application;
+import entities.Conta_bancaria;
 import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
@@ -16,13 +17,12 @@ public class main {
         String cliente = sc.nextLine();
         System.out.println("Digite o número da sua agência: ");
         String numeroAgencia = sc.nextLine();
-        System.out.println("Digite seu saldo: ");
+        System.out.println("Digite número da conta: ");
+        String titular  = sc.nextLine(); // Consumir a quebra de linha após o double
+        System.out.println("Digite seu saldo:");
         double saldo = sc.nextDouble();
-        sc.nextLine(); // Consumir a quebra de linha após o double
-        System.out.println("Digite o número da sua conta:");
-        String numeroConta = sc.nextLine();
-        System.out.println();
-
+        Conta_bancaria conta = new Conta_bancaria(numeroAgencia, saldo, titular, cliente);
+        System.out.println(conta);
     }
 
 

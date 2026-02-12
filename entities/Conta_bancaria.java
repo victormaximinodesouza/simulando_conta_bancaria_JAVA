@@ -43,7 +43,7 @@ public class Conta_bancaria {
             return "Sem cliente";
         }
         else{
-            return cliente;
+            return getCliente();
         }
     }
 
@@ -51,7 +51,7 @@ public class Conta_bancaria {
 
     @Override
     public String toString(){
-        return "Olá: " + getCliente() + ", obrigado por criar uma conta em nosso banco, sua agência é " + getTitular() + ", conta " + 
+        return "Olá " + getCliente() + ", obrigado por criar uma conta em nosso banco, sua agência é " + getTitular() + ", conta " + 
         getNumeroConta() + " e seu saldo " + 
         getSaldo() + " já está disponível para saque";
 
